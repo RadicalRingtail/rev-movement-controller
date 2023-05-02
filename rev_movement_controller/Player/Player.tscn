@@ -1,8 +1,8 @@
 [gd_scene load_steps=15 format=3 uid="uid://k386jvhao3ov"]
 
 [ext_resource type="Script" path="res://Player/Player.gd" id="1_bturt"]
-[ext_resource type="Texture2D" uid="uid://ut1u8qxtwo0b" path="res://icon.svg" id="2_oadg3"]
 [ext_resource type="Texture2D" uid="uid://bwx8vmt5xsg07" path="res://Assets/space kitti-idlet.png" id="3_u8pam"]
+[ext_resource type="Script" path="res://Player/PlayerCamera.gd" id="4_fle6q"]
 [ext_resource type="Texture2D" uid="uid://bf8qkmssyfk24" path="res://Assets/space kitti walkt.png" id="4_jgakw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jml80"]
@@ -80,18 +80,18 @@ animations = [{
 [node name="Player" type="CharacterBody2D"]
 position = Vector2(530, 368)
 script = ExtResource("1_bturt")
+speed = 400.0
+gravity = 980.0
+slowdown_time = 3000.0
+wall_slide = 50.0
+wall_jump_vertical_velocity = 500.0
 jump_height = 150.0
-jump_time_to_peak = 0.5
-jump_time_to_descent = 0.4
+jump_time_to_peak = 0.4
+jump_time_to_descent = 0.5
 
 [node name="CollisionBox" type="CollisionShape2D" parent="."]
 position = Vector2(-1.5, -1.5)
 shape = SubResource("RectangleShape2D_jml80")
-
-[node name="Sprite" type="Sprite2D" parent="."]
-visible = false
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("2_oadg3")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(3, -3)
@@ -102,3 +102,15 @@ autoplay = "idle"
 
 [node name="GroundRay" type="RayCast2D" parent="."]
 target_position = Vector2(1, 70)
+
+[node name="PlayerCamera" type="Camera2D" parent="."]
+process_callback = 0
+position_smoothing_enabled = true
+position_smoothing_speed = 7.0
+drag_horizontal_enabled = true
+script = ExtResource("4_fle6q")
+default_zoom = 2.0
+enable_zoom = true
+min_zoom = 0.5
+max_zoom = 3.5
+zoom_amount = 0.01

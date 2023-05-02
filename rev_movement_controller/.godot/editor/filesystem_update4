@@ -1,2 +1,4 @@
-res://Player/Player.tscn
 res://Main.tscn
+res://Player/Player.tscn
+res://Player/Player.gd
+res://Player/PlayerCamera.gd
