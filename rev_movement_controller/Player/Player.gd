@@ -1,5 +1,8 @@
 extends CharacterBody2D
 
+# sprite animations
+@onready var player_animation = $AnimatedSprite2D
+
 @onready var ground_ray = $GroundRay
 @onready var sprite = $Sprite
 
@@ -37,10 +40,19 @@ func _physics_process(delta) -> void:
 	if direction:
 		# starts movement
 		velocity.x = direction * speed
+		
+				#animations
+		player_animation.animation = "walk"
+		if (direction > 0): #right
+			player_animation.flip_h = false
+		if (direction < 0): #left
+			player_animation.flip_h = true
+			
 	else:
 		if is_on_floor():
 			# stops movement
 			velocity.x = move_toward(velocity.x, 0, slowdown_time * delta)
+			player_animation.animation = "idle"
 		
 	move_and_slide()
 	
