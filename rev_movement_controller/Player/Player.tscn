@@ -113,4 +113,4 @@ default_zoom = 2.0
 enable_zoom = true
 min_zoom = 0.5
 max_zoom = 3.5
-zoom_amount = 0.01
+zoom_amount = 0.1

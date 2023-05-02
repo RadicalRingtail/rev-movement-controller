@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://dbq2ehf8s6ow2"]
+
+[ext_resource type="PackedScene" uid="uid://k386jvhao3ov" path="res://Player/Player.tscn" id="1_vinrp"]
+[ext_resource type="PackedScene" uid="uid://b5cscq2jy5mi8" path="res://Assets/static_box.tscn" id="2_f8cho"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_vinrp")]
+
+[node name="Floor" parent="." instance=ExtResource("2_f8cho")]
+position = Vector2(533, 646)
+scale = Vector2(20, 1)
+
+[node name="LeftWall" parent="." instance=ExtResource("2_f8cho")]
+position = Vector2(-21, 134)
+scale = Vector2(1, 20)
+
+[node name="RightWall" parent="." instance=ExtResource("2_f8cho")]
+position = Vector2(1159, 153)
+scale = Vector2(1, 20)
+
+[node name="MiddleWall" parent="." instance=ExtResource("2_f8cho")]
+position = Vector2(237, 298)
+scale = Vector2(0.5, 3)

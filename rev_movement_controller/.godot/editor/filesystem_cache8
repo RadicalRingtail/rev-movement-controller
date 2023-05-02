@@ -1,12 +1,15 @@
 fc8a56933c4b1c8d796fdb8f7a9f9475
-::res://::1683055621
+::res://::1683065380
 icon.svg::CompressedTexture2D::1444616166836521675::1683052952::1683053314::1::::<><>::
-Main.tscn::PackedScene::2555041634498700752::1683053799::0::1::::<><>::uid://k386jvhao3ov<>uid://b5cscq2jy5mi8
+Main.tscn::PackedScene::2555041634498700752::1683065342::0::1::::<><>::uid://k386jvhao3ov<>uid://b5cscq2jy5mi8
+Map.tscn::PackedScene::7264127817674737591::1683065371::0::1::::<><>::uid://k386jvhao3ov<>uid://b5cscq2jy5mi8
 ::res://Assets/::1683052952
 space kitti walkt.png::CompressedTexture2D::2806479356527347907::1683052952::1683052952::1::::<><>::
 space kitti-idlet.png::CompressedTexture2D::3980097755532483850::1683052952::1683052952::1::::<><>::
 static_box.tscn::PackedScene::4497312108325303985::1683052952::0::1::::<><>::uid://ut1u8qxtwo0b
-::res://Player/::1683053537
-Player.gd::GDScript::-1::1683052952::0::1::::<>CharacterBody2D<>::
-Player.tscn::PackedScene::761750539336017777::1683053537::0::1::::<><>::res://Player/Player.gd<>uid://ut1u8qxtwo0b<>uid://bwx8vmt5xsg07<>uid://bf8qkmssyfk24
+::res://Maps/::1683065380
+::res://Player/::1683065342
+Player.gd::GDScript::-1::1683062320::0::1::::<>CharacterBody2D<>::
+Player.tscn::PackedScene::761750539336017777::1683065342::0::1::::<><>::res://Player/Player.gd<>uid://bwx8vmt5xsg07<>res://Player/PlayerCamera.gd<>uid://bf8qkmssyfk24
+PlayerCamera.gd::GDScript::-1::1683064385::0::1::::<>Camera2D<>::
 space kitti walkt.png::CompressedTexture2D::6855284049690610931::1683052952::1683052952::1::::<><>::
